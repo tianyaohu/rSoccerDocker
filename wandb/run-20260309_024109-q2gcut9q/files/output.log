@@ -1,0 +1,17 @@
+====================================================
+  Algorithm      : SAC
+  Env            : SSLDribbling-v0
+  Timesteps      : 500,000
+  Seed           : 0
+  Run dir        : /workspace/experiments/SAC/2026-03-09_024108_SSLDribbling-v0_seed0/
+====================================================
+Environment initialized
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+
+Training started  (Ctrl-C to stop)
+
+Logging to /workspace/experiments/SAC/2026-03-09_024108_SSLDribbling-v0_seed0/logs/SAC_1
+[------------------------------------]   0.0% | step 100/500,000 | next ckpt in 99,900 (#0)
+Interrupted — saving checkpoint for resume.
+  Saved → /workspace/experiments/SAC/2026-03-09_024108_SSLDribbling-v0_seed0/checkpoints/sac_SSLDribbling-v0_00000182.zip

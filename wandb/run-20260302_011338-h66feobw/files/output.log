@@ -1,0 +1,53 @@
+====================================================
+  Algorithm      : SAC
+  Env            : SSLDribbling-v0
+  Timesteps      : 500,000
+  Remaining      : 400,000
+  Seed           : 0
+  Run dir        : /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/
+  Resuming from  : /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/checkpoints/sac_SSLDribbling-v0_00100000.zip
+====================================================
+Environment initialized
+Resuming from: /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/checkpoints/sac_SSLDribbling-v0_00100000.zip
+Wrapping the env in a DummyVecEnv.
+
+Training started  (Ctrl-C to stop)
+
+Logging to /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/logs/SAC_1
+[=======-----------------------------]  20.1% | step 100,400/500,000 | next ckpt in 99,600 (#1)   ---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 288      |
+|    ep_rew_mean     | 0.01     |
+| time/              |          |
+|    episodes        | 280      |
+|    fps             | 101      |
+|    time_elapsed    | 4        |
+|    total_timesteps | 100412   |
+| train/             |          |
+|    actor_loss      | -2.42    |
+|    critic_loss     | 0.0345   |
+|    ent_coef        | 0.00212  |
+|    ent_coef_loss   | 7.07     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 100310   |
+---------------------------------
+[=======-----------------------------]  20.2% | step 101,000/500,000 | next ckpt in 99,000 (#1)   ---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 283      |
+|    ep_rew_mean     | 0.01     |
+| time/              |          |
+|    episodes        | 284      |
+|    fps             | 93       |
+|    time_elapsed    | 11       |
+|    total_timesteps | 101049   |
+| train/             |          |
+|    actor_loss      | -2.59    |
+|    critic_loss     | 0.0383   |
+|    ent_coef        | 0.00246  |
+|    ent_coef_loss   | 4.58     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 100947   |
+---------------------------------
+[=======-----------------------------]  20.5% | step 102,700/500,000 | next ckpt in 97,300 (#1)   
+Interrupted — saving checkpoint for resume.
+  Saved → /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/checkpoints/sac_SSLDribbling-v0_00102715.zip

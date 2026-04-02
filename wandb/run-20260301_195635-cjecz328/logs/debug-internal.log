@@ -1,0 +1,10 @@
+{"time":"2026-03-01T19:56:35.373763471Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-01T19:56:35.635500222Z","level":"INFO","msg":"stream: created new stream","id":"cjecz328"}
+{"time":"2026-03-01T19:56:35.636966638Z","level":"INFO","msg":"handler: started","stream_id":"cjecz328"}
+{"time":"2026-03-01T19:56:35.637807097Z","level":"INFO","msg":"stream: started","id":"cjecz328"}
+{"time":"2026-03-01T19:56:35.637839263Z","level":"INFO","msg":"writer: started","stream_id":"cjecz328"}
+{"time":"2026-03-01T19:56:35.637956138Z","level":"INFO","msg":"sender: started","stream_id":"cjecz328"}
+{"time":"2026-03-01T19:56:36.156652555Z","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2026-03-01T19:56:45.947310587Z","level":"INFO","msg":"stream: closing","id":"cjecz328"}
+{"time":"2026-03-01T19:56:46.955778921Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-01T19:56:46.956016421Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/workspace/experiments/SAC/2026-03-01_195634_SSLDribbling-v0_seed0/logs/SAC_1\")","namespace":""}

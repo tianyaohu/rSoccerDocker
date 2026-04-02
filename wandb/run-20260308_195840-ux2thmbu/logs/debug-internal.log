@@ -1,0 +1,40 @@
+{"time":"2026-03-08T19:58:40.940399544Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-08T19:58:41.201196169Z","level":"INFO","msg":"stream: created new stream","id":"ux2thmbu"}
+{"time":"2026-03-08T19:58:41.201691336Z","level":"INFO","msg":"handler: started","stream_id":"ux2thmbu"}
+{"time":"2026-03-08T19:58:41.202451086Z","level":"INFO","msg":"stream: started","id":"ux2thmbu"}
+{"time":"2026-03-08T19:58:41.202503461Z","level":"INFO","msg":"sender: started","stream_id":"ux2thmbu"}
+{"time":"2026-03-08T19:58:41.202470961Z","level":"INFO","msg":"writer: started","stream_id":"ux2thmbu"}
+{"time":"2026-03-08T19:58:41.471401836Z","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2026-03-08T19:58:52.399145549Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-08T19:58:52.399656508Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/workspace/experiments/SAC/2026-03-08_195840_SSLDribbling-v0_seed0/logs/SAC_1\")","namespace":""}
+{"time":"2026-03-08T19:58:52.407337341Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/workspace/experiments/SAC/2026-03-08_195840_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1772999922.7b184cac0e12.20.0","runPath":"experiments/SAC/2026-03-08_195840_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1772999922.7b184cac0e12.20.0"}
+{"time":"2026-03-08T20:02:57.563259677Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":574}
+{"time":"2026-03-08T20:02:57.563759802Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-08T20:03:12.573389336Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":694}
+{"time":"2026-03-08T20:03:12.573464503Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-08T20:03:17.576448922Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":747}
+{"time":"2026-03-08T20:03:17.576825922Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-08T20:03:22.578460424Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":804}
+{"time":"2026-03-08T20:03:22.578548924Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-08T20:12:47.883285589Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2190}
+{"time":"2026-03-08T20:12:47.883649714Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2222}
+{"time":"2026-03-08T20:12:47.883392755Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-08T20:12:47.884055714Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":7}
+{"time":"2026-03-08T20:12:52.885753674Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2270}
+{"time":"2026-03-08T20:12:52.886587549Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":15}
+{"time":"2026-03-08T20:16:38.020784584Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3009}
+{"time":"2026-03-08T20:16:38.021109792Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-08T21:13:24.255840177Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":6981}
+{"time":"2026-03-08T21:13:24.256104011Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":7013}
+{"time":"2026-03-08T21:13:24.255976344Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-08T21:13:24.258245011Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":7}
+{"time":"2026-03-08T21:17:14.372063631Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":7364}
+{"time":"2026-03-08T21:17:14.373087881Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":2}
+{"time":"2026-03-08T21:33:24.625016053Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/sfurs/ssldribbling/ux2thmbu/file_stream\": unexpected EOF"}
+{"time":"2026-03-08T22:03:37.224962883Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/sfurs/ssldribbling/ux2thmbu/file_stream\": unexpected EOF"}
+{"time":"2026-03-08T22:09:07.860658925Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-08T22:09:08.039768842Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-08T22:09:08.048605509Z","level":"INFO","msg":"stream: closing","id":"ux2thmbu"}
+{"time":"2026-03-08T22:09:08.051183092Z","level":"INFO","msg":"handler: closed","stream_id":"ux2thmbu"}
+{"time":"2026-03-08T22:09:08.051947509Z","level":"INFO","msg":"sender: closed","stream_id":"ux2thmbu"}
+{"time":"2026-03-08T22:09:08.053057759Z","level":"INFO","msg":"stream: closed","id":"ux2thmbu"}

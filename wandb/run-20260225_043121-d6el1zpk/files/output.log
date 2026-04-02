@@ -1,0 +1,25 @@
+====================================================
+  Algorithm      : SAC
+  Env            : SSLDribbling-v0
+  Timesteps      : 500,000
+  Seed           : 0
+  Run dir        : /workspace/experiments/SAC/2026-02-25_043121_SSLDribbling-v0_seed0/
+  Checkpoint dir : /workspace/experiments/SAC/2026-02-25_043121_SSLDribbling-v0_seed0/checkpoints/
+  Max checkpoints: 5
+  Final model    : /workspace/experiments/SAC/2026-02-25_043121_SSLDribbling-v0_seed0/checkpoints/sac_ssldribbling_v0_final.zip
+  TensorBoard    : /workspace/experiments/SAC/2026-02-25_043121_SSLDribbling-v0_seed0/logs/
+====================================================
+Environment initialized
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+
+Training started  (Ctrl-C saves and exits)
+
+Logging to /workspace/experiments/SAC/2026-02-25_043121_SSLDribbling-v0_seed0/logs/SAC_1
+[2K[35m   0%[0m [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m88/500,000 [0m [ [33m0:00:14[0m < [36m-:--:--[0m , [31m? it/s[0m ]
+[2KInterrupted — saving final model before exit…━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m88/500,000 [0m [ [33m0:00:14[0m < [36m-:--:--[0m , [31m? it/s[0m ]
+[2Km   0%[0m [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m88/500,000 [0m [ [33m0:00:14[0m < [36m-:--:--[0m , [31m? it/s[0m ]
+[2KDone. Final model → /workspace/experiments/SAC/2026-02-25_043121_SSLDribbling-v0_seed0/checkpoints/sac_ssldribbling_v0_final.zip000 [0m [ [33m0:00:14[0m < [36m-:--:--[0m , [31m? it/s[0m ]
+[2KRun directory    → /workspace/experiments/SAC/2026-02-25_043121_SSLDribbling-v0_seed0/━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m88/500,000 [0m [ [33m0:00:14[0m < [36m-:--:--[0m , [31m? it/s[0m ]
+[2KRender videos    → python scripts/render_videos.py━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m88/500,000 [0m [ [33m0:00:14[0m < [36m-:--:--[0m , [31m? it/s[0m ]
+[35m   0%[0m [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m88/500,000 [0m [ [33m0:00:14[0m < [36m-:--:--[0m , [31m? it/s[0m ]

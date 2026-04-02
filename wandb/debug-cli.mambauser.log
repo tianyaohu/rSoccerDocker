@@ -1,0 +1,29 @@
+2026-03-22 19:45:02 INFO Running runs: []
+2026-03-22 19:45:02 INFO Agent received command: run
+2026-03-22 19:45:02 INFO Agent starting run with config:
+	batch_size: 64
+	gamma: 0.99
+	learning_rate: 0.0001
+	tau: 0.005
+2026-03-22 19:45:03 INFO About to run command: /usr/bin/env python  --batch_size=64 --gamma=0.99 --learning_rate=0.0001 --tau=0.005
+2026-03-22 19:45:08 INFO Running runs: ['lo8t1t3g']
+2026-03-22 19:45:08 INFO Cleaning up finished run: lo8t1t3g
+2026-03-22 19:45:08 INFO Agent received command: run
+2026-03-22 19:45:08 INFO Agent starting run with config:
+	batch_size: 64
+	gamma: 0.99
+	learning_rate: 0.0003
+	tau: 0.005
+2026-03-22 19:45:08 INFO About to run command: /usr/bin/env python  --batch_size=64 --gamma=0.99 --learning_rate=0.0003 --tau=0.005
+2026-03-22 19:45:13 INFO Running runs: ['0adxs5cd']
+2026-03-22 19:45:13 INFO Cleaning up finished run: 0adxs5cd
+2026-03-22 19:45:14 INFO Agent received command: run
+2026-03-22 19:45:14 INFO Agent starting run with config:
+	batch_size: 64
+	gamma: 0.99
+	learning_rate: 0.0003
+	tau: 0.005
+2026-03-22 19:45:14 INFO About to run command: /usr/bin/env python  --batch_size=64 --gamma=0.99 --learning_rate=0.0003 --tau=0.005
+2026-03-22 19:45:19 INFO Running runs: ['nwsitdzm']
+2026-03-22 19:45:19 ERROR Detected 3 failed runs in the first 60 seconds, shutting down.
+2026-03-22 19:45:19 INFO To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true

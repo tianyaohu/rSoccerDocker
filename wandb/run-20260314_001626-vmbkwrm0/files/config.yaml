@@ -1,0 +1,26 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            3yj6v7bc3aykon0h4pnh5po6ube2aalc:
+                codePath: wandb_videos.py
+                codePathLocal: wandb_videos.py
+                email: tha161@sfu.ca
+                executable: /opt/conda/envs/rsoccer310/bin/python
+                host: dfaf02998ae6
+                os: Linux-6.12.68-linuxkit-aarch64-with-glibc2.36
+                program: /app/wandb_videos.py
+                python: CPython 3.10.20
+                root: /app
+                startedAt: "2026-03-14T00:16:26.253293Z"
+                writerId: 3yj6v7bc3aykon0h4pnh5po6ube2aalc
+        m: []
+        python_version: 3.10.20
+        t:
+            "3":
+                - 2
+                - 13
+            "4": 3.10.20
+            "5": 0.25.1
+            "12": 0.25.1
+            "13": linux-aarch64

@@ -1,0 +1,1 @@
+src/train.py --env SSLDribbling-v0 --algo sac --seed 0 --timesteps 500000 --save-freq 100000 --max-checkpoints 5

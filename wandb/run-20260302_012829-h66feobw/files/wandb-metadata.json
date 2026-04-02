@@ -1,0 +1,28 @@
+{
+  "os":  "Linux-6.12.68-linuxkit-aarch64-with-glibc2.36",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-03-02T01:28:29.927949Z",
+  "args":  [
+    "--resume",
+    "latest"
+  ],
+  "program":  "/workspace/src/train.py",
+  "codePath":  "src/train.py",
+  "codePathLocal":  "src/train.py",
+  "email":  "tha161@sfu.ca",
+  "root":  "/workspace",
+  "host":  "7fb35c756dfb",
+  "executable":  "/opt/conda/envs/rsoccer310/bin/python",
+  "cpu_count":  10,
+  "cpu_count_logical":  10,
+  "disk":  {
+    "/":  {
+      "total":  "240120725504",
+      "used":  "26027945984"
+    }
+  },
+  "memory":  {
+    "total":  "8217317376"
+  },
+  "writerId":  "z1bbhvn1k4lujkbvblyi6gzm1nfachoq"
+}

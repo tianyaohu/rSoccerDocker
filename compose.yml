@@ -1,0 +1,79 @@
+services:
+
+  # ── Training ────────────────────────────────────────────────
+  #  Usage:  docker compose run --rm train <train.py args>
+  #  Example:
+  #    docker compose run --rm train \
+  #      --env SSLDribbling-v0 --algo sac --seed 0 \
+  #      --timesteps 500000 --save-freq 100000 --max-checkpoints 5
+  train:
+    build: .
+    image: rsoccer:latest
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    env_file: .env
+    entrypoint: ["bash", "-lic", "exec python src/train.py \"$@\"", "--"]
+    # default args (override on CLI)
+    command: ["--env", "SSLDribbling-v0", "--algo", "sac", "--seed", "0",
+              "--timesteps", "500000", "--save-freq", "100000", "--max-checkpoints", "5"]
+
+  # ── Video watcher ───────────────────────────────────────────
+  #  Usage:  docker compose up watcher
+  #  Polls experiments/ and renders videos as checkpoints appear.
+  #  Resource-capped so it doesn't starve training.
+  watcher:
+    image: rsoccer:latest
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    env_file: .env
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 1g
+    entrypoint: ["bash", "-lic"]
+    command: ["python scripts/watch_and_render.py --deterministic"]
+
+  # ── Batch video renderer ────────────────────────────────────
+  #  Usage:  docker compose run --rm render
+  #  One-shot: renders any missing videos then exits.
+  render:
+    image: rsoccer:latest
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    entrypoint: ["bash", "-lic"]
+    command: ["python scripts/render_videos.py --deterministic"]
+
+  # ── TensorBoard ─────────────────────────────────────────────
+  #  Usage:  docker compose up tensorboard
+  #  Open http://localhost:6006
+  tensorboard:
+    image: rsoccer:latest
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    ports:
+      - "6006:6006"
+    entrypoint: ["bash", "-lic"]
+    command: ["tensorboard --logdir experiments --host 0.0.0.0 --port 6006"]
+
+  # ── Tests ──────────────────────────────────────────────────
+  #  Usage:  docker compose run --rm test
+  #  Run a specific file:
+  #    docker compose run --rm test test/test_train.py -v
+  test:
+    image: rsoccer:latest
+    working_dir: /workspace          # default directory inside the container
+    volumes:
+      - .:/workspace                 # mounts rsoccer_docker/ → /workspace/ inside container
+    # entrypoint bakes in "python -m pytest", then appends whatever args come from `command` via $@
+    # -lic: login shell (-l), interactive (-i), run command (-c)
+    entrypoint: ["bash", "-lic", "pip install -q pytest && exec python -m pytest \"$@\"", "--"]
+    command: [
+      "/workspace/test/",  # discover and run all test_*.py files in the test/ folder
+      "-v",                # verbose: print each test name and result
+      "--tb=short"         # on failure, show short traceback (not full deep stack)
+    ]

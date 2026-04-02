@@ -1,0 +1,16 @@
+{
+  "os":  "Linux-6.12.68-linuxkit-aarch64-with-glibc2.36",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-02-25T04:38:58.847392Z",
+  "args":  [
+    "--deterministic"
+  ],
+  "program":  "/workspace/scripts/watch_and_render.py",
+  "codePath":  "scripts/watch_and_render.py",
+  "codePathLocal":  "scripts/watch_and_render.py",
+  "email":  "tha161@sfu.ca",
+  "root":  "/workspace",
+  "host":  "b69bb12f307c",
+  "executable":  "/opt/conda/envs/rsoccer310/bin/python",
+  "writerId":  "8e72aawdul1rfw2hc8bdortwpxyqiqep"
+}

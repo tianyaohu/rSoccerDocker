@@ -1,0 +1,13 @@
+{
+  "os": "Linux-6.12.68-linuxkit-aarch64-with-glibc2.36",
+  "python": "CPython 3.10.20",
+  "startedAt": "2026-03-14T00:16:26.253293Z",
+  "program": "/app/wandb_videos.py",
+  "codePath": "wandb_videos.py",
+  "codePathLocal": "wandb_videos.py",
+  "email": "tha161@sfu.ca",
+  "root": "/app",
+  "host": "dfaf02998ae6",
+  "executable": "/opt/conda/envs/rsoccer310/bin/python",
+  "writerId": "3yj6v7bc3aykon0h4pnh5po6ube2aalc"
+}

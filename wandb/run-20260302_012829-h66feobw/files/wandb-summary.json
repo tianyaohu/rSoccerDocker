@@ -1,0 +1,1 @@
+{"_wandb":{"runtime":1482},"train/actor_loss":-2.9867423,"rollout/ep_len_mean":260.06,"train/ent_coef":0.005305065,"global_step":104786,"_timestamp":1.7724149329286451e+09,"time/fps":96,"_step":679,"rollout/ep_rew_mean":0.01,"train/critic_loss":0.013705968,"train/ent_coef_loss":0.8053955,"train/learning_rate":0.0003,"_runtime":1482}

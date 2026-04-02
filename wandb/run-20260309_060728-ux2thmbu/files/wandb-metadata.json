@@ -1,0 +1,27 @@
+{
+  "os":  "Linux-6.12.68-linuxkit-aarch64-with-glibc2.36",
+  "python":  "CPython 3.10.20",
+  "startedAt":  "2026-03-09T06:07:28.658100Z",
+  "args":  [
+    "--deterministic"
+  ],
+  "program":  "/workspace/scripts/watch_and_render.py",
+  "codePath":  "scripts/watch_and_render.py",
+  "codePathLocal":  "scripts/watch_and_render.py",
+  "email":  "tha161@sfu.ca",
+  "root":  "/workspace",
+  "host":  "e4d1522d9965",
+  "executable":  "/opt/conda/envs/rsoccer310/bin/python",
+  "cpu_count":  10,
+  "cpu_count_logical":  10,
+  "disk":  {
+    "/":  {
+      "total":  "240120725504",
+      "used":  "23642660864"
+    }
+  },
+  "memory":  {
+    "total":  "8217317376"
+  },
+  "writerId":  "cf8c3fh2vjn72zgx5hxntvhaqg1jiq46"
+}
