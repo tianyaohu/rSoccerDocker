@@ -1,0 +1,17 @@
+{"time":"2026-02-25T05:26:40.039468629Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-02-25T05:26:40.146997046Z","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-02-25T05:26:40.147541379Z","level":"INFO","msg":"stream: created new stream","id":"c2q97ecq"}
+{"time":"2026-02-25T05:26:40.148427087Z","level":"INFO","msg":"handler: started","stream_id":"c2q97ecq"}
+{"time":"2026-02-25T05:26:40.148704379Z","level":"INFO","msg":"stream: started","id":"c2q97ecq"}
+{"time":"2026-02-25T05:26:40.148761379Z","level":"INFO","msg":"sender: started","stream_id":"c2q97ecq"}
+{"time":"2026-02-25T05:26:40.148725296Z","level":"INFO","msg":"writer: started","stream_id":"c2q97ecq"}
+{"time":"2026-02-25T05:26:40.149522962Z","level":"WARN","msg":"runupserter: server does not expand metric globs but the x_server_side_expand_glob_metrics setting is set; ignoring"}
+{"time":"2026-02-25T05:26:40.154113004Z","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2026-02-25T05:26:50.813112717Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-02-25T05:26:50.813543092Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/workspace/experiments/SAC/2026-02-25_052639_SSLDribbling-v0_seed0/logs/SAC_1\")","namespace":""}
+{"time":"2026-02-25T05:26:50.815898301Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/workspace/experiments/SAC/2026-02-25_052639_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1771997200.62b73cbbe212.29.0","runPath":"experiments/SAC/2026-02-25_052639_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1771997200.62b73cbbe212.29.0"}
+{"time":"2026-02-25T05:26:52.311095343Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-25T05:26:52.312795176Z","level":"INFO","msg":"stream: closing","id":"c2q97ecq"}
+{"time":"2026-02-25T05:26:52.312845968Z","level":"INFO","msg":"handler: closed","stream_id":"c2q97ecq"}
+{"time":"2026-02-25T05:26:52.316330176Z","level":"INFO","msg":"sender: closed","stream_id":"c2q97ecq"}
+{"time":"2026-02-25T05:26:52.316405843Z","level":"INFO","msg":"stream: closed","id":"c2q97ecq"}

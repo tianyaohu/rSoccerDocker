@@ -1,0 +1,23 @@
+{"time":"2026-03-01T21:34:31.842943085Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-01T21:34:32.100716668Z","level":"INFO","msg":"stream: created new stream","id":"mw0aiywm"}
+{"time":"2026-03-01T21:34:32.101182252Z","level":"INFO","msg":"handler: started","stream_id":"mw0aiywm"}
+{"time":"2026-03-01T21:34:32.101799293Z","level":"INFO","msg":"stream: started","id":"mw0aiywm"}
+{"time":"2026-03-01T21:34:32.101859127Z","level":"INFO","msg":"sender: started","stream_id":"mw0aiywm"}
+{"time":"2026-03-01T21:34:32.101825877Z","level":"INFO","msg":"writer: started","stream_id":"mw0aiywm"}
+{"time":"2026-03-01T21:34:32.462611294Z","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2026-03-01T21:34:43.260708299Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-01T21:34:43.26105984Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/workspace/experiments/SAC/2026-03-01_213431_SSLDribbling-v0_seed0/logs/SAC_1\")","namespace":""}
+{"time":"2026-03-01T21:34:43.262795882Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/workspace/experiments/SAC/2026-03-01_213431_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1772400873.891d793aff52.1.0","runPath":"experiments/SAC/2026-03-01_213431_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1772400873.891d793aff52.1.0"}
+{"time":"2026-03-01T21:39:13.448686924Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3191}
+{"time":"2026-03-01T21:39:13.451029132Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-01T21:39:18.452870134Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3279}
+{"time":"2026-03-01T21:39:18.453734176Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":15}
+{"time":"2026-03-01T21:39:23.455934054Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3378}
+{"time":"2026-03-01T21:39:23.45751822Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":15}
+{"time":"2026-03-01T21:59:30.523773045Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/sfurs/ssldribbling/mw0aiywm/file_stream\": unexpected EOF"}
+{"time":"2026-03-01T22:02:44.442022842Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-01T22:02:44.608333009Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-01T22:02:44.624433426Z","level":"INFO","msg":"stream: closing","id":"mw0aiywm"}
+{"time":"2026-03-01T22:02:44.625987301Z","level":"INFO","msg":"handler: closed","stream_id":"mw0aiywm"}
+{"time":"2026-03-01T22:02:44.626713509Z","level":"INFO","msg":"sender: closed","stream_id":"mw0aiywm"}
+{"time":"2026-03-01T22:02:44.626867884Z","level":"INFO","msg":"stream: closed","id":"mw0aiywm"}

@@ -1,0 +1,15 @@
+{"time":"2026-03-02T01:13:38.281032128Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-02T01:13:38.545543503Z","level":"INFO","msg":"stream: created new stream","id":"h66feobw"}
+{"time":"2026-03-02T01:13:38.546197462Z","level":"INFO","msg":"handler: started","stream_id":"h66feobw"}
+{"time":"2026-03-02T01:13:38.547181753Z","level":"INFO","msg":"stream: started","id":"h66feobw"}
+{"time":"2026-03-02T01:13:38.547215628Z","level":"INFO","msg":"writer: started","stream_id":"h66feobw"}
+{"time":"2026-03-02T01:13:38.547235837Z","level":"INFO","msg":"sender: started","stream_id":"h66feobw"}
+{"time":"2026-03-02T01:13:38.94175117Z","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2026-03-02T01:13:49.829811134Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-02T01:13:49.831433967Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/logs/SAC_1\")","namespace":""}
+{"time":"2026-03-02T01:13:49.83479455Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1772414019.b3fa23a4a527.1.0","runPath":"experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1772414019.b3fa23a4a527.1.0"}
+{"time":"2026-03-02T01:14:09.477360212Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-02T01:14:09.665196712Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-02T01:14:09.670927504Z","level":"INFO","msg":"stream: closing","id":"h66feobw"}
+{"time":"2026-03-02T01:14:09.671105087Z","level":"INFO","msg":"handler: closed","stream_id":"h66feobw"}
+{"time":"2026-03-02T01:14:09.671688962Z","level":"INFO","msg":"sender: closed","stream_id":"h66feobw"}

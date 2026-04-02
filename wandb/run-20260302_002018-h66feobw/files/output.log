@@ -1,0 +1,52 @@
+====================================================
+  Algorithm      : SAC
+  Env            : SSLDribbling-v0
+  Timesteps      : 500,000
+  Seed           : 0
+  Run dir        : /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/
+  Resuming from  : /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/checkpoints/sac_SSLDribbling-v0_00100000.zip
+====================================================
+Environment initialized
+Resuming from: /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/checkpoints/sac_SSLDribbling-v0_00100000.zip
+Wrapping the env in a DummyVecEnv.
+
+Training started  (Ctrl-C to stop)
+
+Logging to /workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/logs/SAC_1
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━[0m [32m402/500,000 [0m [ [33m0:00:06[0m < [36m2:06:40[0m , [31m66 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 288      |
+|    ep_rew_mean     | 0.01     |
+| time/              |          |
+|    episodes        | 280      |
+|    fps             | 64       |
+|    time_elapsed    | 6        |
+|    total_timesteps | 100412   |
+| train/             |          |
+|    actor_loss      | -2.42    |
+|    critic_loss     | 0.0345   |
+|    ent_coef        | 0.00212  |
+|    ent_coef_loss   | 7.07     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 100310   |
+---------------------------------
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━[0m [32m1,043/500,000 [0m [ [33m0:00:14[0m < [36m1:57:30[0m , [31m71 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 283      |
+|    ep_rew_mean     | 0.01     |
+| time/              |          |
+|    episodes        | 284      |
+|    fps             | 69       |
+|    time_elapsed    | 14       |
+|    total_timesteps | 101049   |
+| train/             |          |
+|    actor_loss      | -2.59    |
+|    critic_loss     | 0.0383   |
+|    ent_coef        | 0.00246  |
+|    ent_coef_loss   | 4.58     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 100947   |
+---------------------------------
+[2K[35m   0%[0m [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1,143/500,000 [0m [ [33m0:00:16[0m < [36m1:55:57[0m , [31m72 it/s[0m ]
+[2KInterrupted — exiting without saving final model.━[0m [32m1,143/500,000 [0m [ [33m0:00:16[0m < [36m1:55:57[0m , [31m72 it/s[0m ]
+[35m   0%[0m [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1,143/500,000 [0m [ [33m0:00:16[0m < [36m1:55:57[0m , [31m72 it/s[0m ]

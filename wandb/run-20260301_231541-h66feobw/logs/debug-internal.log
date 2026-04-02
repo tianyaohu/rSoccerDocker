@@ -1,0 +1,30 @@
+{"time":"2026-03-01T23:15:41.63534918Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-01T23:15:42.285281097Z","level":"INFO","msg":"stream: created new stream","id":"h66feobw"}
+{"time":"2026-03-01T23:15:42.286048722Z","level":"INFO","msg":"handler: started","stream_id":"h66feobw"}
+{"time":"2026-03-01T23:15:42.28725093Z","level":"INFO","msg":"stream: started","id":"h66feobw"}
+{"time":"2026-03-01T23:15:42.28727843Z","level":"INFO","msg":"writer: started","stream_id":"h66feobw"}
+{"time":"2026-03-01T23:15:42.287432888Z","level":"INFO","msg":"sender: started","stream_id":"h66feobw"}
+{"time":"2026-03-01T23:15:42.647724388Z","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2026-03-01T23:15:53.320327338Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-01T23:15:53.320735254Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/logs/SAC_1\")","namespace":""}
+{"time":"2026-03-01T23:15:53.324298838Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/workspace/experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1772406943.f164bae12127.1.0","runPath":"experiments/SAC/2026-03-01_231540_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1772406943.f164bae12127.1.0"}
+{"time":"2026-03-01T23:20:18.483651585Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3029}
+{"time":"2026-03-01T23:20:18.484714877Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3061}
+{"time":"2026-03-01T23:20:18.484346169Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-01T23:20:18.485892835Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":7}
+{"time":"2026-03-01T23:20:28.491383923Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3201}
+{"time":"2026-03-01T23:20:28.495018007Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":15}
+{"time":"2026-03-01T23:20:33.493934592Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3301}
+{"time":"2026-03-01T23:20:33.494071217Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-01T23:20:33.496094467Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3333}
+{"time":"2026-03-01T23:20:33.496965384Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":7}
+{"time":"2026-03-01T23:20:38.496546803Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3424}
+{"time":"2026-03-01T23:20:38.496602678Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-01T23:31:58.797391965Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":10923}
+{"time":"2026-03-01T23:31:58.797626757Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-03-01T23:39:06.085520969Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-01T23:39:06.335824677Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-01T23:39:06.355874135Z","level":"INFO","msg":"stream: closing","id":"h66feobw"}
+{"time":"2026-03-01T23:39:06.356054135Z","level":"INFO","msg":"handler: closed","stream_id":"h66feobw"}
+{"time":"2026-03-01T23:39:06.356370052Z","level":"INFO","msg":"sender: closed","stream_id":"h66feobw"}
+{"time":"2026-03-01T23:39:06.356499677Z","level":"INFO","msg":"stream: closed","id":"h66feobw"}

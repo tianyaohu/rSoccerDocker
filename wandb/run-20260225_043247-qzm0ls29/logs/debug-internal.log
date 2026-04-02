@@ -1,0 +1,16 @@
+{"time":"2026-02-25T04:32:48.054333261Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-02-25T04:32:48.321515552Z","level":"INFO","msg":"stream: created new stream","id":"qzm0ls29"}
+{"time":"2026-02-25T04:32:48.322025719Z","level":"INFO","msg":"stream: started","id":"qzm0ls29"}
+{"time":"2026-02-25T04:32:48.322419844Z","level":"INFO","msg":"writer: started","stream_id":"qzm0ls29"}
+{"time":"2026-02-25T04:32:48.322460677Z","level":"INFO","msg":"sender: started","stream_id":"qzm0ls29"}
+{"time":"2026-02-25T04:32:48.322474094Z","level":"INFO","msg":"handler: started","stream_id":"qzm0ls29"}
+{"time":"2026-02-25T04:32:48.739999636Z","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2026-02-25T04:32:59.244123252Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-02-25T04:32:59.244473502Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/workspace/experiments/SAC/2026-02-25_043247_SSLDribbling-v0_seed0/logs/SAC_1\")","namespace":""}
+{"time":"2026-02-25T04:32:59.24723146Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/workspace/experiments/SAC/2026-02-25_043247_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1771993969.baf425da1017.1.0","runPath":"experiments/SAC/2026-02-25_043247_SSLDribbling-v0_seed0/logs/SAC_1/events.out.tfevents.1771993969.baf425da1017.1.0"}
+{"time":"2026-02-25T04:36:19.712784053Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-25T04:36:19.863517553Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-25T04:36:19.870145803Z","level":"INFO","msg":"stream: closing","id":"qzm0ls29"}
+{"time":"2026-02-25T04:36:19.871469345Z","level":"INFO","msg":"handler: closed","stream_id":"qzm0ls29"}
+{"time":"2026-02-25T04:36:19.871689761Z","level":"INFO","msg":"sender: closed","stream_id":"qzm0ls29"}
+{"time":"2026-02-25T04:36:19.871724011Z","level":"INFO","msg":"stream: closed","id":"qzm0ls29"}

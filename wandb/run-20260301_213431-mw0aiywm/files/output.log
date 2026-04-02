@@ -1,0 +1,582 @@
+====================================================
+  Algorithm      : SAC
+  Env            : SSLDribbling-v0
+  Timesteps      : 500,000
+  Seed           : 0
+  Run dir        : /workspace/experiments/SAC/2026-03-01_213431_SSLDribbling-v0_seed0/
+====================================================
+Environment initialized
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+
+Training started  (Ctrl-C saves and exits)
+
+Logging to /workspace/experiments/SAC/2026-03-01_213431_SSLDribbling-v0_seed0/logs/SAC_1
+[2K---------------------------------━━━━━━━━━━━━━━━[0m [32m8,832/500,000 [0m [ [33m0:01:31[0m < [36m1:24:16[0m , [31m97 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 2.21e+03 |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 4        |
+|    fps             | 96       |
+|    time_elapsed    | 91       |
+|    total_timesteps | 8844     |
+| train/             |          |
+|    actor_loss      | -28.2    |
+|    critic_loss     | 0.0148   |
+|    ent_coef        | 0.0729   |
+|    ent_coef_loss   | -17.3    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 8743     |
+---------------------------------
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━[0m [32m11,286/500,000 [0m [ [33m0:02:02[0m < [36m1:45:02[0m , [31m78 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 1.41e+03 |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 8        |
+|    fps             | 91       |
+|    time_elapsed    | 123      |
+|    total_timesteps | 11297    |
+| train/             |          |
+|    actor_loss      | -25.9    |
+|    critic_loss     | 0.03     |
+|    ent_coef        | 0.0352   |
+|    ent_coef_loss   | -20.7    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 11196    |
+---------------------------------
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━[0m [32m13,586/500,000 [0m [ [33m0:02:31[0m < [36m1:41:30[0m , [31m80 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 1.13e+03 |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 12       |
+|    fps             | 89       |
+|    time_elapsed    | 151      |
+|    total_timesteps | 13591    |
+| train/             |          |
+|    actor_loss      | -23.3    |
+|    critic_loss     | 2.02     |
+|    ent_coef        | 0.0183   |
+|    ent_coef_loss   | -21      |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 13490    |
+---------------------------------
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━[0m [32m14,793/500,000 [0m [ [33m0:02:45[0m < [36m1:35:58[0m , [31m84 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 925      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 16       |
+|    fps             | 89       |
+|    time_elapsed    | 165      |
+|    total_timesteps | 14807    |
+| train/             |          |
+|    actor_loss      | -22      |
+|    critic_loss     | 0.0304   |
+|    ent_coef        | 0.0137   |
+|    ent_coef_loss   | -12.8    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 14706    |
+---------------------------------
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━[0m [32m15,447/500,000 [0m [ [33m0:02:53[0m < [36m1:36:22[0m , [31m84 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 773      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 20       |
+|    fps             | 88       |
+|    time_elapsed    | 173      |
+|    total_timesteps | 15458    |
+| train/             |          |
+|    actor_loss      | -21.6    |
+|    critic_loss     | 0.0284   |
+|    ent_coef        | 0.012    |
+|    ent_coef_loss   | -12.4    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 15357    |
+---------------------------------
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16,031/500,000 [0m [ [33m0:03:02[0m < [36m1:39:51[0m , [31m81 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 668      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 24       |
+|    fps             | 88       |
+|    time_elapsed    | 182      |
+|    total_timesteps | 16036    |
+| train/             |          |
+|    actor_loss      | -21      |
+|    critic_loss     | 0.0427   |
+|    ent_coef        | 0.0109   |
+|    ent_coef_loss   | -3.25    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 15935    |
+---------------------------------
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━[0m [32m18,163/500,000 [0m [ [33m0:03:26[0m < [36m1:37:15[0m , [31m83 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 649      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 28       |
+|    fps             | 87       |
+|    time_elapsed    | 206      |
+|    total_timesteps | 18174    |
+| train/             |          |
+|    actor_loss      | -19.2    |
+|    critic_loss     | 0.0457   |
+|    ent_coef        | 0.00742  |
+|    ent_coef_loss   | -4.55    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 18073    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m19,443/500,000 [0m [ [33m0:03:44[0m < [36m1:42:50[0m , [31m78 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 608      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 32       |
+|    fps             | 86       |
+|    time_elapsed    | 224      |
+|    total_timesteps | 19452    |
+| train/             |          |
+|    actor_loss      | -18.2    |
+|    critic_loss     | 1.1      |
+|    ent_coef        | 0.00696  |
+|    ent_coef_loss   | -2.36    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 19351    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m19,925/500,000 [0m [ [33m0:03:51[0m < [36m1:48:12[0m , [31m74 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 554      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 36       |
+|    fps             | 86       |
+|    time_elapsed    | 231      |
+|    total_timesteps | 19937    |
+| train/             |          |
+|    actor_loss      | -18      |
+|    critic_loss     | 0.0539   |
+|    ent_coef        | 0.00669  |
+|    ent_coef_loss   | -1.26    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 19836    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m20,504/500,000 [0m [ [33m0:04:00[0m < [36m1:56:37[0m , [31m69 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 513      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 40       |
+|    fps             | 85       |
+|    time_elapsed    | 240      |
+|    total_timesteps | 20512    |
+| train/             |          |
+|    actor_loss      | -17.6    |
+|    critic_loss     | 1.01     |
+|    ent_coef        | 0.00658  |
+|    ent_coef_loss   | 2.85     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 20411    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m22,124/500,000 [0m [ [33m0:04:21[0m < [36m1:48:00[0m , [31m74 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 503      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 44       |
+|    fps             | 84       |
+|    time_elapsed    | 261      |
+|    total_timesteps | 22138    |
+| train/             |          |
+|    actor_loss      | -16.6    |
+|    critic_loss     | 0.905    |
+|    ent_coef        | 0.0076   |
+|    ent_coef_loss   | 0.53     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 22037    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m22,327/500,000 [0m [ [33m0:04:24[0m < [36m1:47:18[0m , [31m74 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 465      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 48       |
+|    fps             | 84       |
+|    time_elapsed    | 264      |
+|    total_timesteps | 22343    |
+| train/             |          |
+|    actor_loss      | -16.5    |
+|    critic_loss     | 0.69     |
+|    ent_coef        | 0.00751  |
+|    ent_coef_loss   | 0.512    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 22242    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m22,532/500,000 [0m [ [33m0:04:27[0m < [36m1:46:40[0m , [31m75 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 433      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 52       |
+|    fps             | 84       |
+|    time_elapsed    | 267      |
+|    total_timesteps | 22540    |
+| train/             |          |
+|    actor_loss      | -16.4    |
+|    critic_loss     | 0.058    |
+|    ent_coef        | 0.00766  |
+|    ent_coef_loss   | 2.24     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 22439    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m22,989/500,000 [0m [ [33m0:04:32[0m < [36m1:43:41[0m , [31m77 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 411      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 56       |
+|    fps             | 84       |
+|    time_elapsed    | 272      |
+|    total_timesteps | 23000    |
+| train/             |          |
+|    actor_loss      | -16.2    |
+|    critic_loss     | 0.0488   |
+|    ent_coef        | 0.00771  |
+|    ent_coef_loss   | 0.272    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 22899    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m23,245/500,000 [0m [ [33m0:04:35[0m < [36m1:43:05[0m , [31m77 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 388      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 60       |
+|    fps             | 84       |
+|    time_elapsed    | 276      |
+|    total_timesteps | 23253    |
+| train/             |          |
+|    actor_loss      | -16      |
+|    critic_loss     | 0.0704   |
+|    ent_coef        | 0.00785  |
+|    ent_coef_loss   | -0.871   |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 23152    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m23,548/500,000 [0m [ [33m0:04:39[0m < [36m1:43:20[0m , [31m77 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 368      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 64       |
+|    fps             | 84       |
+|    time_elapsed    | 279      |
+|    total_timesteps | 23549    |
+| train/             |          |
+|    actor_loss      | -15.9    |
+|    critic_loss     | 0.0691   |
+|    ent_coef        | 0.00833  |
+|    ent_coef_loss   | -0.38    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 23448    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m23,673/500,000 [0m [ [33m0:04:41[0m < [36m1:43:42[0m , [31m77 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 348      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 68       |
+|    fps             | 84       |
+|    time_elapsed    | 281      |
+|    total_timesteps | 23679    |
+| train/             |          |
+|    actor_loss      | -15.7    |
+|    critic_loss     | 0.981    |
+|    ent_coef        | 0.00852  |
+|    ent_coef_loss   | 1.47     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 23578    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m23,851/500,000 [0m [ [33m0:04:43[0m < [36m1:43:34[0m , [31m77 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 331      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 72       |
+|    fps             | 84       |
+|    time_elapsed    | 283      |
+|    total_timesteps | 23859    |
+| train/             |          |
+|    actor_loss      | -15.6    |
+|    critic_loss     | 0.0512   |
+|    ent_coef        | 0.00857  |
+|    ent_coef_loss   | 2.45     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 23758    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m24,126/500,000 [0m [ [33m0:04:46[0m < [36m1:42:23[0m , [31m77 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 318      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 76       |
+|    fps             | 84       |
+|    time_elapsed    | 286      |
+|    total_timesteps | 24134    |
+| train/             |          |
+|    actor_loss      | -15.4    |
+|    critic_loss     | 0.351    |
+|    ent_coef        | 0.00885  |
+|    ent_coef_loss   | 1.21     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 24033    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m24,283/500,000 [0m [ [33m0:04:48[0m < [36m1:41:11[0m , [31m78 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 304      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 80       |
+|    fps             | 84       |
+|    time_elapsed    | 288      |
+|    total_timesteps | 24292    |
+| train/             |          |
+|    actor_loss      | -15.5    |
+|    critic_loss     | 0.966    |
+|    ent_coef        | 0.00907  |
+|    ent_coef_loss   | -0.315   |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 24191    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m24,904/500,000 [0m [ [33m0:04:56[0m < [36m1:38:55[0m , [31m80 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 297      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 84       |
+|    fps             | 83       |
+|    time_elapsed    | 296      |
+|    total_timesteps | 24908    |
+| train/             |          |
+|    actor_loss      | -15.2    |
+|    critic_loss     | 0.0485   |
+|    ent_coef        | 0.00927  |
+|    ent_coef_loss   | 2.52     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 24807    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m25,570/500,000 [0m [ [33m0:05:06[0m < [36m1:42:24[0m , [31m77 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 291      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 88       |
+|    fps             | 83       |
+|    time_elapsed    | 306      |
+|    total_timesteps | 25582    |
+| train/             |          |
+|    actor_loss      | -14.7    |
+|    critic_loss     | 0.956    |
+|    ent_coef        | 0.00857  |
+|    ent_coef_loss   | 0.714    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 25481    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m26,411/500,000 [0m [ [33m0:05:16[0m < [36m1:40:35[0m , [31m78 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 287      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 92       |
+|    fps             | 83       |
+|    time_elapsed    | 316      |
+|    total_timesteps | 26417    |
+| train/             |          |
+|    actor_loss      | -14.3    |
+|    critic_loss     | 0.0559   |
+|    ent_coef        | 0.00832  |
+|    ent_coef_loss   | 0.364    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 26316    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m28,150/500,000 [0m [ [33m0:05:36[0m < [36m1:34:01[0m , [31m84 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 293      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 96       |
+|    fps             | 83       |
+|    time_elapsed    | 336      |
+|    total_timesteps | 28158    |
+| train/             |          |
+|    actor_loss      | -13.6    |
+|    critic_loss     | 0.0581   |
+|    ent_coef        | 0.00824  |
+|    ent_coef_loss   | -0.163   |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 28057    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m28,888/500,000 [0m [ [33m0:05:46[0m < [36m1:35:35[0m , [31m82 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 289      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 100      |
+|    fps             | 83       |
+|    time_elapsed    | 346      |
+|    total_timesteps | 28903    |
+| train/             |          |
+|    actor_loss      | -13.4    |
+|    critic_loss     | 0.0362   |
+|    ent_coef        | 0.00803  |
+|    ent_coef_loss   | -2.34    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 28802    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,151/500,000 [0m [ [33m0:06:02[0m < [36m1:38:30[0m , [31m80 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 213      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 104      |
+|    fps             | 83       |
+|    time_elapsed    | 362      |
+|    total_timesteps | 30159    |
+| train/             |          |
+|    actor_loss      | -12.7    |
+|    critic_loss     | 0.05     |
+|    ent_coef        | 0.00766  |
+|    ent_coef_loss   | 0.435    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 30058    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m31,377/500,000 [0m [ [33m0:06:19[0m < [36m1:48:03[0m , [31m72 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 201      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 108      |
+|    fps             | 82       |
+|    time_elapsed    | 379      |
+|    total_timesteps | 31380    |
+| train/             |          |
+|    actor_loss      | -12.2    |
+|    critic_loss     | 0.157    |
+|    ent_coef        | 0.00769  |
+|    ent_coef_loss   | -2.28    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 31279    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m31,924/500,000 [0m [ [33m0:06:26[0m < [36m1:45:43[0m , [31m74 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 183      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 112      |
+|    fps             | 82       |
+|    time_elapsed    | 386      |
+|    total_timesteps | 31928    |
+| train/             |          |
+|    actor_loss      | -12.1    |
+|    critic_loss     | 0.268    |
+|    ent_coef        | 0.00754  |
+|    ent_coef_loss   | 0.216    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 31827    |
+---------------------------------
+[2K---------------------------------0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m33,602/500,000 [0m [ [33m0:06:51[0m < [36m1:50:41[0m , [31m70 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 188      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 116      |
+|    fps             | 81       |
+|    time_elapsed    | 411      |
+|    total_timesteps | 33614    |
+| train/             |          |
+|    actor_loss      | -11.4    |
+|    critic_loss     | 0.814    |
+|    ent_coef        | 0.00725  |
+|    ent_coef_loss   | 0.546    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 33513    |
+---------------------------------
+[2K---------------------------------[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m37,108/500,000 [0m [ [33m0:07:42[0m < [36m1:41:51[0m , [31m76 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 217      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 120      |
+|    fps             | 80       |
+|    time_elapsed    | 462      |
+|    total_timesteps | 37123    |
+| train/             |          |
+|    actor_loss      | -10.2    |
+|    critic_loss     | 0.105    |
+|    ent_coef        | 0.00604  |
+|    ent_coef_loss   | 2.83     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 37022    |
+---------------------------------
+[2K---------------------------------[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m37,500/500,000 [0m [ [33m0:07:48[0m < [36m1:43:06[0m , [31m75 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 215      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 124      |
+|    fps             | 80       |
+|    time_elapsed    | 468      |
+|    total_timesteps | 37504    |
+| train/             |          |
+|    actor_loss      | -10.1    |
+|    critic_loss     | 0.691    |
+|    ent_coef        | 0.00589  |
+|    ent_coef_loss   | 1.58     |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 37403    |
+---------------------------------
+[2K---------------------------------[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m38,287/500,000 [0m [ [33m0:07:59[0m < [36m1:46:49[0m , [31m72 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 201      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 128      |
+|    fps             | 79       |
+|    time_elapsed    | 479      |
+|    total_timesteps | 38290    |
+| train/             |          |
+|    actor_loss      | -9.85    |
+|    critic_loss     | 0.0549   |
+|    ent_coef        | 0.00585  |
+|    ent_coef_loss   | -1.81    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 38189    |
+---------------------------------
+[2K---------------------------------[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m48,534/500,000 [0m [ [33m0:11:15[0m < [36m1:27:35[0m , [31m86 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 291      |
+|    ep_rew_mean     | 0        |
+| time/              |          |
+|    episodes        | 132      |
+|    fps             | 29       |
+|    time_elapsed    | 1632     |
+|    total_timesteps | 48546    |
+| train/             |          |
+|    actor_loss      | -7.57    |
+|    critic_loss     | 0.186    |
+|    ent_coef        | 0.00505  |
+|    ent_coef_loss   | -2.45    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 48445    |
+---------------------------------
+[2K[35m  11%[0m [91m━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m53,062/500,000 [0m [ [33m0:12:13[0m < [36m1:40:12[0m , [31m74 it/s[0m ]
+[2KInterrupted — saving final model before exit…━━━━━━━━━━━━━━━━[0m [32m53,062/500,000 [0m [ [33m0:12:13[0m < [36m1:40:12[0m , [31m74 it/s[0m ]
+[2K[35m  11%[0m [91m━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m53,071/500,000 [0m [ [33m0:12:13[0m < [36m1:40:12[0m , [31m74 it/s[0m ]
+[2KDone. Final model → 0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m53,071/500,000 [0m [ [33m0:12:13[0m < [36m1:40:12[0m , [31m74 it/s[0m ]
+/workspace/experiments/SAC/2026-03-01_213431_SSLDribbling-v0_seed0/checkpoints/sa
+c_ssldribbling_v0_final.zip
+[35m  11%[0m [91m━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m53,071/500,000 [0m [ [33m0:12:13[0m < [36m1:40:12[0m , [31m74 it/s[0m ]
