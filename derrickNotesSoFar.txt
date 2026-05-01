@@ -1,0 +1,6 @@
+task 0
+migrate repo to gitlab
+write .yml that runs every push
+install python deps from reqs.txt/pyproj.toml in a CI job
+cache the pip/poetry install layer so re-ruins dont re-download
+testing: yaml, pipeline, caching.z
