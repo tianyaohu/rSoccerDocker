@@ -1,6 +1,17 @@
+5/2/2026
 task 0
 migrate repo to gitlab
 write .yml that runs every push
 install python deps from reqs.txt/pyproj.toml in a CI job
 cache the pip/poetry install layer so re-ruins dont re-download
 testing: yaml, pipeline, caching.z
+
+5/4/2026
+created run_script yaml
+ - runs tests in a for loop of the folder
+ - is probably pytest framework so we can use pytest tools to id errors
+next steps
+ - adding pytest feature to id error in yaml
+  - switching to a "test runner"?
+ - adding flake8 linting
+ - adding pull request trigger for double safety
