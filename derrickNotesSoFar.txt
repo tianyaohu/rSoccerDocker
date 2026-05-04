@@ -13,5 +13,6 @@ created run_script yaml
 next steps
  - adding pytest feature to id error in yaml
   - switching to a "test runner"?
- - adding flake8 linting
+ - adding ruff for multi tool ["linting", "formatting", "import sorting?"]
+   - additionally add mypy for type checking
  - adding pull request trigger for double safety
