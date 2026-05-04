@@ -2,3 +2,4 @@ pytest
 wandb
 stable-baselines3
 shimmy
+-e .
