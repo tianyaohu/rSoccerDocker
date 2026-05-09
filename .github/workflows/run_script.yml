@@ -24,4 +24,4 @@ jobs:
             -e PYTHONPATH=/workspace/src \
             -e WANDB_MODE=offline \
             rsoccer:latest \
-            /bin/bash -c "for file in test/*.py; do echo 'executing $file...'; python \$file; done"
+            /bin/bash -c "for file in test/*.py; do echo 'executing $file...'; micromamba run -n rsoccer310 python \$file; done"
