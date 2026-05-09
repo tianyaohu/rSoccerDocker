@@ -1,4 +1,4 @@
-ockimport wandb
+import wandb
 import glob
 
 wandb.init(project="video-test", name="local-video-upload")
