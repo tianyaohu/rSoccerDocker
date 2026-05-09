@@ -70,6 +70,8 @@
     RUN micromamba run -n rsoccer310 python -m pip install --no-cache-dir \
         gymnasium \
         stable-baselines3 \
+        pytest \
+        wandb \
         pygame \
         moviepy imageio imageio-ffmpeg \
         tensorboard \
