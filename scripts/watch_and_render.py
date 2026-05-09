@@ -252,8 +252,8 @@ def main():
     console.print(f"  Watching    : {experiments_root}/")
     console.print(f"  Max videos  : {args.max_videos} per run (+ final)")
     console.print(f"  Interval    : {args.interval}s")
-    console.print(f"  W&B upload  : enabled (reads wandb_run_id.txt)")
-    console.print(f"  Ctrl+C to stop\n")
+    console.print("  W&B upload  : enabled (reads wandb_run_id.txt)")
+    console.print("  Ctrl+C to stop\n")
 
     total = 0
     while running:

@@ -12,7 +12,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from resume import (
     ResumeError,
-    ResumeResult,
     apply_config,
     find_latest_run,
     highest_checkpoint,

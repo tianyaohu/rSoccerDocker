@@ -3,7 +3,6 @@ Tests for src/utils.py — algo registry, env/model builders, checkpoint callbac
 
 Run: pytest tests/test_utils.py -v
 """
-import pytest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 

@@ -219,7 +219,7 @@ def main():
     model.save(str(final_path))
     print(f"\nDone. Final model → {final_path}.zip")
     print(f"Run directory    → {run_dir}/")
-    print(f"Render videos    → python scripts/render_videos.py")
+    print("Render videos    → python scripts/render_videos.py")
 
     # ---- finish wandb -------------------------------------------------
     run.finish()
