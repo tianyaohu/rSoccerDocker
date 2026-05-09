@@ -21,7 +21,7 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/workspace \
             -w /workspace \
-            -e PYTHONPATH=/workspace/src |
+            -e PYTHONPATH=/workspace/src \
             -e WANDB_MODE=offline \
             rsoccer:latest \
             /bin/bash -c "for file in test/*.py; do echo 'executing $file...'; python \$file; done"
