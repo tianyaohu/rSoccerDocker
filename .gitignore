@@ -1,1 +1,21 @@
 .DS_Store
+
+# secrets / local config
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# local environments
+venv/
+.venv/
+
