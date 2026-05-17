@@ -16,9 +16,13 @@ python src/train.py --resume 2026-02-25_024550_SSLDribbling-v0_seed0
 
 import argparse
 import os
+import profile
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
+import cProfile
+import pstats
 
 import wandb
 from wandb.integration.sb3 import WandbCallback
@@ -226,8 +230,15 @@ def main(argv: list[str] | None = None, *, hard_exit_on_interrupt: bool = False)
         GlobalProgressCallback(run_state=run_state, verbose=1),
         WandbCallback(gradient_save_freq=0, verbose=0),
     ]
+    # Create profiler
+    profiler = cProfile.Profile()
+    
+    print("\nProfiling started...\n")
+    profiler.enable()
+
 
     print("\nTraining started  (Ctrl-C to stop)\n")
+
     try:
         model.learn(
             total_timesteps     = remaining,
@@ -245,6 +256,16 @@ def main(argv: list[str] | None = None, *, hard_exit_on_interrupt: bool = False)
         if hard_exit_on_interrupt:
             os._exit(0)
         return
+    ## Save profiling
+    profiler.disable()
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    profile_path = f"profiles/training_profile_{timestamp}.prof"
+    profiler.dump_stats(profile_path)
+    print(f"\nProfiling completed. Saved to {profile_path}\n")
+
+
+
 
     model.save(str(final_path))
     print(f"\nDone. Final model → {final_path}.zip")
