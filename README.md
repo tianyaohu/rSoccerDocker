@@ -121,6 +121,21 @@ docker compose run tensorboard
 # → http://localhost:6006
 ```
 
+### Profiling
+
+Training runs are automatically profiled using `cProfile`. 
+
+To visualize the profiling results install and use `snakeviz`:
+
+```bash
+# Install snakeviz if you don't have it
+pip install snakeviz
+
+# Visualize a generated profile (replace with actual timestamp)
+snakeviz profiles/training_profile_YYYYMMDD_HHMMSS.prof
+
+```
+This opens a localhost where you can see results visualized like in the example profiles/profiler.png
 ---
 
 ## Run all experiments (Warning: it could take Days)
