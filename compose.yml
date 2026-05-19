@@ -13,10 +13,34 @@ services:
     volumes:
       - .:/workspace
     env_file: .env
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     entrypoint: ["bash", "-lic", "exec python src/train.py \"$@\"", "--"]
     # default args (override on CLI)
     command: ["--env", "SSLDribbling-v0", "--algo", "sac", "--seed", "0",
               "--timesteps", "500000", "--save-freq", "100000", "--max-checkpoints", "5"]
+
+  # GPU verification
+  # Usage: docker compose run --rm gpu-check
+  gpu-check:
+    image: rsoccer:latest
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    entrypoint: ["bash", "-lic"]
+    command: ["python -c \"import torch; print('torch', torch.__version__); print('cuda available', torch.cuda.is_available()); print('cuda runtime', torch.version.cuda); print('gpu', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'n/a')\""]
 
   # ── Video watcher ───────────────────────────────────────────
   #  Usage:  docker compose up watcher

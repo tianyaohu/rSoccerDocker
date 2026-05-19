@@ -78,8 +78,8 @@
         tqdm \
         rich \
      && micromamba run -n rsoccer310 python -m pip install --no-cache-dir \
-        --index-url https://download.pytorch.org/whl/cpu \
-        torch torchvision torchaudio
+        --index-url https://download.pytorch.org/whl/cu128 \
+        torch==2.11.0 torchvision==0.26.0 torchaudio==2.11.0
     
     # Port for TensorBoard
     EXPOSE 6006

@@ -52,13 +52,20 @@ def make_env(env_id: str, algo: str, n_envs: int, seed: int):
     return make_vec_env(env_id, n_envs=n_envs, seed=seed)
 
 
-def build_model(algo: str, env, log_dir: Path, seed: int, resume: str | None):
+def build_model(algo: str, env, log_dir: Path, seed: int, resume: str | None, device: str):
     """Create a fresh model or load from checkpoint."""
     AlgoClass = ALGOS[algo]
     if resume:
         print(f"Resuming from: {resume}")
-        return AlgoClass.load(resume, env=env, tensorboard_log=str(log_dir))
-    return AlgoClass("MlpPolicy", env, verbose=1, seed=seed, tensorboard_log=str(log_dir))
+        return AlgoClass.load(resume, env=env, tensorboard_log=str(log_dir), device=device)
+    return AlgoClass(
+        "MlpPolicy",
+        env,
+        verbose=1,
+        seed=seed,
+        tensorboard_log=str(log_dir),
+        device=device,
+    )
 
 
 # ---------------------------------------------------------------------------

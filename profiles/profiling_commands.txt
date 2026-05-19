@@ -1,0 +1,5 @@
+GPU
+docker compose run --rm -e WANDB_MODE=disabled train  --env SSLDribbling-v0 --algo sac --seed 0 --timesteps 10000 --save-freq 1000 --max-checkpoints 5 --device cuda
+
+CPU
+docker compose run --rm -e WANDB_MODE=disabled train  --env SSLDribbling-v0 --algo sac --seed 0 --timesteps 10000 --save-freq 1000 --max-checkpoints 5 --device cpu
