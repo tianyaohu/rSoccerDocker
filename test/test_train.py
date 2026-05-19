@@ -10,7 +10,7 @@ from unittest.mock import MagicMock, patch
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from train import parse_args, resolve_resume
+from train import parse_args, resolve_device, resolve_resume
 
 
 # ---------------------------------------------------------------------------
@@ -55,6 +55,7 @@ class TestParseArgs:
         assert args.max_checkpoints == 5
         assert args.n_envs == 4
         assert args.seed == 0
+        assert args.device == "auto"
         assert args.resume is None
 
     def test_all_explicit(self):
@@ -62,6 +63,7 @@ class TestParseArgs:
             "--env", "VSS-v0", "--algo", "ppo",
             "--timesteps", "10000000", "--save-freq", "200000",
             "--max-checkpoints", "3", "--n-envs", "8", "--seed", "42",
+            "--device", "cuda",
         ])
         assert args.env == "VSS-v0"
         assert args.algo == "ppo"
@@ -70,6 +72,11 @@ class TestParseArgs:
         assert args.max_checkpoints == 3
         assert args.n_envs == 8
         assert args.seed == 42
+        assert args.device == "cuda"
+
+    @pytest.mark.parametrize("device", ["auto", "cpu", "cuda"])
+    def test_device_choices(self, device):
+        assert parse_args(["--device", device]).device == device
 
     def test_resume_latest(self):
         assert parse_args(["--resume", "latest"]).resume == "latest"
@@ -80,6 +87,26 @@ class TestParseArgs:
     def test_invalid_algo_exits(self):
         with pytest.raises(SystemExit):
             parse_args(["--algo", "td3"])
+
+    def test_invalid_device_exits(self):
+        with pytest.raises(SystemExit):
+            parse_args(["--device", "mps"])
+
+
+class TestResolveDevice:
+
+    @patch("train.torch.cuda.is_available", return_value=False)
+    def test_auto_falls_back_to_cpu(self, _mock_cuda):
+        assert resolve_device("auto") == "cpu"
+
+    @patch("train.torch.cuda.is_available", return_value=True)
+    def test_auto_uses_cuda_when_available(self, _mock_cuda):
+        assert resolve_device("auto") == "cuda"
+
+    @patch("train.torch.cuda.is_available", return_value=False)
+    def test_explicit_cuda_unavailable_exits(self, _mock_cuda):
+        with pytest.raises(SystemExit):
+            resolve_device("cuda")
 
 
 # ===========================================================================
@@ -182,7 +209,8 @@ class TestMainWiring:
         mock_wandb.init.return_value = MagicMock(id="test123")
 
         with patch("utils.SAC") as MockSAC, \
-             patch.dict("utils.ALGOS", {"sac": MockSAC}):
+             patch.dict("utils.ALGOS", {"sac": MockSAC}), \
+             patch("train.torch.cuda.is_available", return_value=False):
             MockSAC.return_value = mock_model
 
             from train import main
@@ -195,6 +223,7 @@ class TestMainWiring:
         # Correct algo with correct seed
         MockSAC.assert_called_once()
         assert MockSAC.call_args[1]["seed"] == 7
+        assert MockSAC.call_args[1]["device"] == "cpu"
 
         # Correct env
         mock_gym.assert_called_with("SSLDribbling-v0")
@@ -206,6 +235,7 @@ class TestMainWiring:
 
         # W&B project name
         assert mock_wandb.init.call_args[1]["project"] == "ssldribbling"
+        assert mock_wandb.init.call_args[1]["config"]["device"] == "cpu"
 
     @patch("train.wandb")
     @patch("train.WandbCallback")

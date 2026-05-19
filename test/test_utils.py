@@ -105,11 +105,12 @@ class TestBuildModel:
             mock_env = MagicMock()
 
             with patch.dict("utils.ALGOS", {algo_name: mock_class}):
-                build_model(algo_name, mock_env, Path("/tmp/logs"), seed=42, resume=None)
+                build_model(algo_name, mock_env, Path("/tmp/logs"), seed=42,
+                            resume=None, device="cpu")
 
             mock_class.assert_called_once_with(
                 "MlpPolicy", mock_env, verbose=1, seed=42,
-                tensorboard_log="/tmp/logs"
+                tensorboard_log="/tmp/logs", device="cpu"
             )
 
     def test_resume_calls_load(self):
@@ -118,10 +119,11 @@ class TestBuildModel:
 
         with patch.dict("utils.ALGOS", {"sac": mock_class}):
             build_model("sac", mock_env, Path("/tmp/logs"), seed=42,
-                        resume="/path/to/ckpt.zip")
+                        resume="/path/to/ckpt.zip", device="cuda")
 
         mock_class.load.assert_called_once_with(
-            "/path/to/ckpt.zip", env=mock_env, tensorboard_log="/tmp/logs"
+            "/path/to/ckpt.zip", env=mock_env, tensorboard_log="/tmp/logs",
+            device="cuda"
         )
         # Should NOT create a fresh model
         mock_class.assert_not_called()
@@ -129,13 +131,15 @@ class TestBuildModel:
     def test_fresh_does_not_call_load(self):
         mock_class = MagicMock()
         with patch.dict("utils.ALGOS", {"sac": mock_class}):
-            build_model("sac", MagicMock(), Path("/tmp"), seed=0, resume=None)
+            build_model("sac", MagicMock(), Path("/tmp"), seed=0,
+                        resume=None, device="cpu")
         mock_class.load.assert_not_called()
 
     def test_seed_is_passed_through(self):
         mock_class = MagicMock()
         with patch.dict("utils.ALGOS", {"ddpg": mock_class}):
-            build_model("ddpg", MagicMock(), Path("/tmp"), seed=99, resume=None)
+            build_model("ddpg", MagicMock(), Path("/tmp"), seed=99,
+                        resume=None, device="cpu")
         _, kwargs = mock_class.call_args
         assert kwargs["seed"] == 99
 

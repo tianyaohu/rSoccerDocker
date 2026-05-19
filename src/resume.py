@@ -47,6 +47,7 @@ COMMAND_KEYS = [
     (r"--seed\s+(\d+)",             "seed",             int),
     (r"--max-checkpoints\s+(\d+)",  "max_checkpoints",  int),
     (r"--n-envs\s+(\d+)",           "n_envs",           int),
+    (r"--device\s+(\S+)",           "device",           str),
 ]
 
 REQUIRED_KEYS = {"env", "algo"}

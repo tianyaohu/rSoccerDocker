@@ -55,6 +55,37 @@ docker compose run --rm train \
   --timesteps 500000 --save-freq 100000 --max-checkpoints 5
 ```
 
+### GPU training
+
+GPU training targets NVIDIA CUDA. The host must have an NVIDIA GPU, working NVIDIA drivers, and Docker GPU support enabled. Rebuild the image after pulling these Dockerfile changes so the CUDA-enabled PyTorch wheels are installed:
+
+```bash
+docker compose build train
+```
+
+Verify CUDA from inside the container:
+
+```bash
+docker compose run --rm gpu-check
+```
+
+Quick CPU-only smoke test:
+
+```bash
+docker compose run --rm train
+  --env SSLDribbling-v0 --algo sac --seed 0
+  --timesteps 5000 --save-freq 1000 --max-checkpoints 5
+  --device cpu
+```
+
+Longer NVIDIA GPU run with profiling output:
+
+```bash
+docker compose run --rm train --env SSLDribbling-v0 --algo sac --seed 0 --timesteps 10000000 --save-freq 500000 --max-checkpoints 5 --device cuda
+```
+
+Use `--device auto` to choose CUDA when PyTorch can see a GPU and CPU otherwise. Use `--device cuda` when you want training to fail fast if the GPU is not available.
+
 #### train.py flags
 
 
@@ -67,6 +98,7 @@ docker compose run --rm train \
 | `--max-checkpoints` | `5`               | Max rotating checkpoints kept         |
 | `--n-envs`          | `4`               | Parallel envs (PPO only)              |
 | `--seed`            | `0`               | Random seed                           |
+| `--device`          | `auto`            | Device: `auto`, `cpu`, or `cuda`      |
 | `--resume`          | —                 | Resume from a checkpoint `.zip`       |
 
 
@@ -136,6 +168,15 @@ snakeviz profiles/training_profile_YYYYMMDD_HHMMSS.prof
 
 ```
 This opens a localhost where you can see results visualized like in the example profiles/profiler.png
+
+### Viewing training results
+
+- **W&B:** training metrics, TensorBoard sync, config, and uploaded videos appear in the W&B project for the selected environment.
+- **TensorBoard:** run `docker compose up tensorboard`, then open `http://localhost:6006`.
+- **Checkpoints:** rotating checkpoints and final models are saved under `experiments/<ALGO>/<run>/checkpoints/`.
+- **Videos:** watcher or batch-rendered videos are saved under `experiments/<ALGO>/<run>/videos/`.
+- **Profiler:** each completed training run prints the generated `profiles/training_profile_YYYYMMDD_HHMMSS.prof` path. Open it with `snakeviz <that-path>`.
+
 ---
 
 ## Run all experiments (Warning: it could take Days)

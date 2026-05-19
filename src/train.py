@@ -15,15 +15,15 @@ python src/train.py --resume 2026-02-25_024550_SSLDribbling-v0_seed0
 """
 
 import argparse
+import cProfile
 import os
-import profile
 import re
+import shlex
 import sys
 from datetime import datetime
 from pathlib import Path
-import cProfile
-import pstats
 
+import torch
 import wandb
 from wandb.integration.sb3 import WandbCallback
 
@@ -60,6 +60,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--n-envs",           type=int, default=4,
                         help="Parallel envs (PPO only)")
     parser.add_argument("--seed",             type=int, default=0)
+    parser.add_argument("--device",           choices=("auto", "cpu", "cuda"), default="auto",
+                        help="Training device: auto, cpu, or cuda")
     parser.add_argument("--resume",           default=None, metavar="RUN_DIR_OR_LATEST",
                         help="'latest' to auto-find newest unfinished run, "
                              "or a run folder name/path")
@@ -119,6 +121,59 @@ def _print_resume_info(run_dir: Path, checkpoint: Path):
 
 
 # ---------------------------------------------------------------------------
+# Device resolution
+# ---------------------------------------------------------------------------
+
+def resolve_device(requested: str) -> str:
+    """Resolve the requested training device and fail clearly for missing CUDA."""
+    cuda_available = torch.cuda.is_available()
+    if requested == "auto":
+        return "cuda" if cuda_available else "cpu"
+    if requested == "cuda" and not cuda_available:
+        print(
+            "ERROR: --device cuda was requested, but CUDA is not available to PyTorch. "
+            "Check NVIDIA drivers, Docker GPU access, and the CUDA-enabled PyTorch install."
+        )
+        sys.exit(1)
+    return requested
+
+
+def describe_torch_device(device: str) -> list[str]:
+    """Return short banner lines describing PyTorch and the selected device."""
+    lines = [
+        f"  Device         : {device}",
+        f"  PyTorch        : {torch.__version__}",
+        f"  CUDA available : {torch.cuda.is_available()}",
+        f"  CUDA runtime   : {torch.version.cuda or 'n/a'}",
+    ]
+    if torch.cuda.is_available():
+        try:
+            lines.append(f"  GPU            : {torch.cuda.get_device_name(0)}")
+        except Exception as exc:
+            lines.append(f"  GPU            : unavailable ({exc})")
+    return lines
+
+
+def command_text(argv: list[str] | None, device: str) -> str:
+    """Return a reproducible command with the effective training device."""
+    tokens = list(sys.argv if argv is None else ["python", "src/train.py", *argv])
+    cleaned = []
+    skip_next = False
+    for token in tokens:
+        if skip_next:
+            skip_next = False
+            continue
+        if token == "--device":
+            skip_next = True
+            continue
+        if token.startswith("--device="):
+            continue
+        cleaned.append(token)
+    cleaned.extend(["--device", device])
+    return " ".join(shlex.quote(token) for token in cleaned) + "\n"
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -132,6 +187,9 @@ def main(argv: list[str] | None = None, *, hard_exit_on_interrupt: bool = False)
     except ResumeError as e:
         print(f"ERROR: {e}")
         sys.exit(1)
+
+    resolved_device = resolve_device(args.device)
+    args.device = resolved_device
 
     if run_dir is None:
         run_dir = create_run_dir(root, args.algo, args.env, args.seed)
@@ -150,7 +208,7 @@ def main(argv: list[str] | None = None, *, hard_exit_on_interrupt: bool = False)
     wandb_run_id_file = run_dir / "wandb_run_id.txt"
     wandb_kwargs = dict(
         project=args.env.lower().replace("-v0", ""),
-        entity="sfurs",
+        entity="mpb8-",
         name=run_dir.name,
         config=vars(args),
         tags=[args.algo, f"seed{args.seed}"],
@@ -171,7 +229,7 @@ def main(argv: list[str] | None = None, *, hard_exit_on_interrupt: bool = False)
 
     # ---- save command for reproducibility ---------------------------------
     if not resume_mode:
-        (run_dir / "command.txt").write_text(" ".join(sys.argv) + "\n")
+        (run_dir / "command.txt").write_text(command_text(argv, resolved_device))
 
     # ---- banner -----------------------------------------------------------
     print("=" * 52)
@@ -181,6 +239,8 @@ def main(argv: list[str] | None = None, *, hard_exit_on_interrupt: bool = False)
     if resume_result is not None:
         print(f"  Remaining      : {remaining:,}")
     print(f"  Seed           : {args.seed}")
+    for line in describe_torch_device(resolved_device):
+        print(line)
     print(f"  Run dir        : {run_dir}/")
     if args.resume:
         print(f"  Resuming from  : {args.resume}")
@@ -190,7 +250,7 @@ def main(argv: list[str] | None = None, *, hard_exit_on_interrupt: bool = False)
 
     # ---- train ------------------------------------------------------------
     env   = make_env(args.env, args.algo, args.n_envs, args.seed)
-    model = build_model(args.algo, env, log_dir, args.seed, args.resume)
+    model = build_model(args.algo, env, log_dir, args.seed, args.resume, resolved_device)
 
     # Already at or past target: save _final and exit without calling learn()
     if remaining <= 0:
@@ -259,8 +319,10 @@ def main(argv: list[str] | None = None, *, hard_exit_on_interrupt: bool = False)
     ## Save profiling
     profiler.disable()
 
+    profile_dir = root / "profiles"
+    profile_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    profile_path = f"profiles/training_profile_{timestamp}.prof"
+    profile_path = profile_dir / f"training_profile_{timestamp}.prof"
     profiler.dump_stats(profile_path)
     print(f"\nProfiling completed. Saved to {profile_path}\n")
 
